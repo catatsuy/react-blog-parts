@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Portal Example</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="blog-parts"></div>
+
+  <script>
+    // External script to change the content of the div
+    const el = document.getElementById('blog-parts');
+    const h2 = document.createElement('h2');
+    h2.textContent = 'This is not React';
+    const p = document.createElement('p');
+    p.textContent = 'This is not React content.';
+    const div = document.createElement('div');
+    div.textContent = 'June 30, 2024';
+    div.classList.add('post-date');
+    el.appendChild(h2);
+    el.appendChild(p);
+    el.appendChild(div);
+
+    const root = document.getElementById('root');
+    root.innerText = 'This is not React';
+  </script>
+</body>
+
+</html>
